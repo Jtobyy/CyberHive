@@ -6,7 +6,7 @@ import { useState } from "react";
 
 // import ic_call from '../assets/call.svg';
 // import ic_mail from '../assets/ic_mail.svg';
-
+import { Stack, Button } from '@mui/material';
 import logo from '../assets/logo.svg';
 
 
@@ -30,7 +30,7 @@ export default function Header() {
             <nav className="navbar mt-0 py-2 px-md-5 px-0 navbar-expand-lg">
               <div className="container-fluid px-3">
                 <Link className="navbar-brand" to="/">
-                  <img src={logo} width="130"  alt="" />
+                  <img src={logo} width="200"  alt="" />
                 </Link>
                 <div className="navbar-toggler" onClick={() => toggleNavbar()} type="button" data-bs-target="#headerNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <div className="toggle-line t1 mb-1"></div>
@@ -68,6 +68,10 @@ export default function Header() {
                         }}>Pricing</a>
                         </li>
                   </ul>
+                    <Stack direction='row' spacing={2}>
+                      <Button sx={{borderRadius: '5px', border: 'solid 1px #FF499E'}} >Log in</Button>  
+                      <Button sx={{borderRadius: '5px', backgroundColor: '#FF499E'}}>Create account</Button>
+                  </Stack>
                 </div>
               </div>
             </nav>
