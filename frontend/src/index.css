@@ -34,3 +34,8 @@ code {
 .t3 {
   width: 13px;
 }
+@media screen and (max-width: 700px) {
+  .footer-icons img {
+    width: 20px;
+  }
+}
