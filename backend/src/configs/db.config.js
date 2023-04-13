@@ -5,7 +5,6 @@ const dbConfig = {
   options: {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
   },
 };
 
