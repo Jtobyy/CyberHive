@@ -24,7 +24,9 @@ export default function Login() {
                         {/* <FormHelperText id="">We'll never share your email.</FormHelperText> */}
                     </div>
                     <FormControlLabel control={<Checkbox defaultChecked />} label="Terms and conditions" />
-                    <Button sx={{borderRadius: '5px', mt: 1, alignSelf: 'center', width: '50%', backgroundColor: '#FF499E'}}>Login </Button>
+                    <Link to="/welcome">
+                        <Button sx={{borderRadius: '5px', mt: 1, alignSelf: 'center', width: '50%', backgroundColor: '#FF499E'}}>Login </Button>
+                    </Link>
                     <Typography sx={{alignSelf: 'center',  mt: 1,}}>Don't have an account? 
                         <Link to="/auth" class="ms-1" style={{color: "#FF499E"}} state={{page: 'signup'}}>
                             Create one

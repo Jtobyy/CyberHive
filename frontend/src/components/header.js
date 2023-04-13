@@ -62,10 +62,10 @@ export default function Header() {
                         </li>
                         
                         <li className="nav-item me-3 " id="nav-item4">
-                            <a className="nav-link" href="https://cyberfix.cybervilla.io" onClick={(e) => {
+                            <Link className="nav-link" to="/pricing" onClick={(e) => {
                                 $('.nav-item').removeClass('active')
                                 e.target.parentElement.classList.add('active')
-                        }}>Pricing</a>
+                        }}>Pricing</Link>
                         </li>
                   </ul>
                     <Stack direction='row' spacing={2}>

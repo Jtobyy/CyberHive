@@ -9,6 +9,9 @@ import Footer from './components/footer';
 import Auth from './pages/auth';
 import Landing from './pages/landing';
 import NotFound from './pages/notFound';
+import Pricing from './pages/pricing';
+import Welcome from './pages/welcome';
+import Dashboard from './pages/dashboard';
 
 
 class App extends React.Component {
@@ -19,10 +22,13 @@ class App extends React.Component {
           <Routes>
             <Route path='/' element={<Landing />} />
             <Route path='/auth' element={<Auth />}></Route>  
+            <Route path='/pricing' element={<Pricing />} />
+            <Route path='/welcome' element={<Welcome />} />
+            <Route path='/dashboard' element={<Dashboard />} />
             {/* <Route path='/device-model' element={<SelectDeviceModel />} />
-            <Route path='/damage-option' element={<SelectDamage />} />
-            <Route path='/repair-form' element={<RepairForm />} />
-            <Route path='/make-payment' element={<MakePayment />} /> */}
+
+            
+             */}
 
             <Route path="*" element={<NotFound />} />
           </Routes>
