@@ -69,8 +69,13 @@ export default function Header() {
                         </li>
                   </ul>
                     <Stack direction='row' spacing={2}>
-                      <Button sx={{borderRadius: '5px', border: 'solid 1px #FF499E'}} >Log in</Button>  
-                      <Button sx={{borderRadius: '5px', backgroundColor: '#FF499E'}}>Create account</Button>
+                      <Link to="/auth" state={{ page: 'login'}}>
+                        <Button sx={{borderRadius: '5px', border: 'solid 1px #FF499E'}} >Log in</Button>  
+                      </Link>
+                      
+                      <Link to="/auth" state={{ page: 'signup'}}>
+                        <Button sx={{borderRadius: '5px', backgroundColor: '#FF499E'}}>Create account</Button>
+                      </Link>
                   </Stack>
                 </div>
               </div>

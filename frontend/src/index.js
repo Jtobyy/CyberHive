@@ -5,8 +5,8 @@ import reportWebVitals from './reportWebVitals';
 
 import { Route, Routes, BrowserRouter as Router, } from 'react-router-dom';
 import Footer from './components/footer';
-import Header from './components/header';
 
+import Auth from './pages/auth';
 import Landing from './pages/landing';
 import NotFound from './pages/notFound';
 
@@ -16,9 +16,9 @@ class App extends React.Component {
     return (
       <Router>
         <div >
-          <Header />
           <Routes>
             <Route path='/' element={<Landing />} />
+            <Route path='/auth' element={<Auth />}></Route>  
             {/* <Route path='/device-model' element={<SelectDeviceModel />} />
             <Route path='/damage-option' element={<SelectDamage />} />
             <Route path='/repair-form' element={<RepairForm />} />

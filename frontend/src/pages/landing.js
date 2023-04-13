@@ -18,6 +18,7 @@ import avatar1 from "../assets/Avatar.svg";
 import avatar2 from "../assets/avatar2.svg";
 import avatar3 from "../assets/avatar3.svg";
 import avatar4 from "../assets/avatar4.svg";
+import Header from '../components/header';
 
 import { HashLink } from "react-router-hash-link";
 import StarBorderIcon from '@mui/icons-material/StarBorder';
@@ -27,6 +28,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 export default function Landing() {
     return (
         <React.Fragment>
+            <Header />    
             <Box mt={6} id="box1"
             sx={{backgroundImage: `url(${bg1})`, 
             pt: {xs: 10, md: 16}, pb: {xs: 10, md: 12}, px: {xs: 3, md: 8}}}>
