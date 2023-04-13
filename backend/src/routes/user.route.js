@@ -6,10 +6,10 @@ const authenticateToken = require("../middleware/authenticateToken.middleware")
 const userController = require("../controllers/user.controller");
 
 
-// @route   get api/user/:id
+// @route   get api/users/getuser
 // @desc    get user details
 // @access  Private
 
-router.get("/:id", authenticateToken , userController.getUser);
+router.get("/getuser", authenticateToken , userController.getUser);
 
 module.exports = router;
