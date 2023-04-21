@@ -4,6 +4,7 @@ const dbConfig = require('../configs/index').dbConfig;
 
 //connect to database
 const connectDB = async () => {
+  
     try {
         //this is the connection to the database
         await mongoose.connect(dbConfig.uri, dbConfig.options);

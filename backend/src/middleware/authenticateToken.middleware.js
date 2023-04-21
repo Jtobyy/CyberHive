@@ -4,7 +4,11 @@ const authConfig = require("../configs/index").authConfig;
 
 const authenticateToken = function (req, res, next) {
   // Get token from header
-  const token = req.header("x-auth-token");
+  const authHeader = req.header("Authorization");
+
+  const token = authHeader && authHeader.split(" ")[1];
+
+  console.log("token: "+ jwt.verify(token, authConfig.jwtSecret))
 
   // Check if not token
   if (!token) {
@@ -21,4 +25,4 @@ const authenticateToken = function (req, res, next) {
   }
 };
 
-export default authenticateToken;
+module.exports = authenticateToken;
