@@ -3,7 +3,7 @@ import Header from "../components/header"
 
 export default function NotFound() {
     return (
-        <Box>
+        <Box color="black">
             <Header />    
             <Box display='flex' height='100vh' flexDirection='column' justifyContent='center' alignItems='center'>
 

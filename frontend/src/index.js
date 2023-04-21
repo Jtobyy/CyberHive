@@ -12,7 +12,16 @@ import NotFound from './pages/notFound';
 import Pricing from './pages/pricing';
 import Welcome from './pages/welcome';
 import Dashboard from './pages/dashboard';
+import Course from './dashboard/coursePage';
 
+
+export const BASE_URL = "https://cyberhive.herokuapp.com/api"
+
+export const ENDPOINTS = { 
+  login: '/auth/login',
+  register: '/auth/register',
+  getUserDetails: '/users/getuser'
+}
 
 class App extends React.Component {
   render() {
@@ -25,10 +34,7 @@ class App extends React.Component {
             <Route path='/pricing' element={<Pricing />} />
             <Route path='/welcome' element={<Welcome />} />
             <Route path='/dashboard' element={<Dashboard />} />
-            {/* <Route path='/device-model' element={<SelectDeviceModel />} />
-
-            
-             */}
+            <Route path='/courses/1' element={<Course />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

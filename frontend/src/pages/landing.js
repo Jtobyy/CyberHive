@@ -23,13 +23,33 @@ import Header from '../components/header';
 import { HashLink } from "react-router-hash-link";
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import ScrollToTopOnMount from "../components/scrolltoview";
 
 
 export default function Landing() {
+    const reveal = () => {
+        let reveals = document.querySelectorAll(".reveal");
+    
+        for (var i = 0; i < reveals.length; i++) {
+          let windowHeight = window.innerHeight;
+          let elementTop = reveals[i].getBoundingClientRect().top;
+          let elementVisible = 100;
+    
+          if (elementTop < windowHeight - elementVisible)
+            reveals[i].classList.add('active');
+          else
+          reveals[i].classList.remove('active');
+        }
+      }
+      React.useEffect(() => { 
+        window.addEventListener('scroll', reveal);
+      })
+
     return (
         <React.Fragment>
+            <ScrollToTopOnMount />    
             <Header />    
-            <Box mt={6} id="box1"
+            <Box mt={6} id="box1" 
             sx={{backgroundImage: `url(${bg1})`, 
             pt: {xs: 10, md: 16}, pb: {xs: 10, md: 12}, px: {xs: 3, md: 8}}}>
                 <Box sx={{ width: {md: '50%'}}}>
@@ -40,7 +60,7 @@ export default function Landing() {
                     With our intuitive platform, you'll have access to a wealth of resources, including interactive course and engaging videos. Our team of experienced educators and developers has worked to create an immersive learning experience that's both effective and efficient.
                     </Typography>
 
-                    <Stack direction='row' spacing={2}>
+                    <Stack direction='row' spacing={2} >
                         <Button sx={{borderRadius: '5px', backgroundColor: '#FF499E'}}>Start learning for free</Button>
                         <Button sx={{borderRadius: '5px', border: 'solid 1px #FF499E'}} >Cyberhive for teams</Button>
                     </Stack>
@@ -64,7 +84,7 @@ export default function Landing() {
                     height={40}
                     sx={{ width: {xs: '20vw'}}} />
             </Box>
-            <Box 
+            <Box  component='div' id="blog" className='reveal' 
             bgcolor="#1B065E"
             sx={{
             pt: {xs: 5, md: 10}, pb: {xs: 10, md: 12}, px: {xs: 3, md: 8}}}>
@@ -77,7 +97,7 @@ export default function Landing() {
                 As technology advances, so do the methods of cyber attacks. Cyber criminals are constantly developing new ways to breach systems, making it increasingly difficult to protect against attacks. Start your learning journey with cyberhive as be help you achieve your goals. Go from beginner to advanced through our structural courses, study guides, resources and expert mentors.
                 </Typography>
             </Box>
-            <Box 
+            <Box component='div' className='reveal' 
             bgcolor="white"
             color="black"
             sx={{
@@ -145,7 +165,7 @@ export default function Landing() {
                 </Stack>
             </Box>
 
-            <Box bgcolor='#1B065E' color='#FF499E' display='flex' alignItems='center' sx={{justifyContent: {xs: 'space-between', md: 'space-around'}, p: {xs: 3, md: 6}}} >
+            <Box component='div' className='reveal' bgcolor='#1B065E' color='#FF499E' display='flex' alignItems='center' sx={{justifyContent: {xs: 'space-between', md: 'space-around'}, p: {xs: 3, md: 6}}} >
                 <Box sx={{ width: {xs: '10vw'}}}>
                     <Typography textAlign='center' variant="h4"
                     sx={{fontSize: {xs:'1.4rem', md: '2.5rem'}}}>1000+</Typography>    
@@ -183,7 +203,7 @@ export default function Landing() {
                 </Box>    
             </Box>
             
-            <Stack direction='row' sx={{py: {xs: 3, md: 10}, px: {xs: 1, md: 9}}}  spacing={2} alignItems='center'>
+            <Stack component='div' className='reveal' direction='row' sx={{py: {xs: 3, md: 10}, px: {xs: 1, md: 9}}}  spacing={2} alignItems='center'>
                 <Box component="img" src={programmer} width="50vw" />
                 <Box color='black'>
                     <Typography 
@@ -197,7 +217,7 @@ export default function Landing() {
                 </Box>
             </Stack>
 
-            <Box color="black"
+            <Box component='div' className='reveal' color="black"
             sx={{pt: {xs: 5, md: 0}, pb: {xs: 10, md: 12}, px: {xs: 3, md: 8}}}>
                 <Typography textAlign='center' sx={{ fontSize: {md: '4rem'}}} variant="h4">
                     Our Courses
@@ -280,7 +300,7 @@ export default function Landing() {
                 
             </Box>
 
-            <Box display="flex" flexDirection='column' alignItems='center' bgcolor='#1B065E' sx={{pt: 7, pb: {xs: 10, md: 12}, px: {xs: 3, md: 8}}}>
+            <Box component='div' className='reveal' display="flex" flexDirection='column' alignItems='center' bgcolor='#1B065E' sx={{pt: 7, pb: {xs: 10, md: 12}, px: {xs: 3, md: 8}}}>
                 <Typography textAlign='center' mb={2}>REVIEWS</Typography>
                 <Typography mb={5} textAlign='center' sx={{ fontSize: {md: '4rem'}, width: {md: '70%'}}} variant="h4">
                     Why Other People Love
@@ -332,7 +352,7 @@ export default function Landing() {
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid item md={6} >
+                    <Grid item md={6} className='reveal'>
                         <Card >
                             <CardHeader
                                 avatar={
@@ -354,11 +374,11 @@ export default function Landing() {
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid item md={6} >
+                    <Grid item md={6} component='div' className='reveal' >
                         <Card >
                             <CardHeader
                                 avatar={
-                                <Avatar aria-label="recipe">
+                                <Avatar aria-label="avatar">
                                     <img src={avatar4} />
                                 </Avatar>
                                 }
@@ -379,7 +399,7 @@ export default function Landing() {
                 </Grid>
             </Box>
 
-            <Container bgcolor="white" sx={{display: 'flex', justifyContent: 'center'}}>
+            <Container component='div' className='reveal' bgcolor="white" sx={{display: 'flex', justifyContent: 'center'}}>
                 <HashLink to="/#">
                     <IconButton >
                         <Button sx={{borderRadius: '5px', textTransform: 'none', backgroundColor: '#FF499E'}}>Back To Top

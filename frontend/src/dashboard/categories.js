@@ -84,7 +84,7 @@ export default class Categories extends React.Component {
                         <Category />
                     </Box>
                     
-                    <Box mt={4}  sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', md: '0px'}}}>
+                    <Box mt={4}  sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', sm: '0px'}}}>
                         <Typography fontWeight="bold" variant="h5">Courses for Cyber- Security For Professsionals</Typography>
                         <Typography variant="body2" mb={1}>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks.</Typography>
 
@@ -127,7 +127,7 @@ export default class Categories extends React.Component {
                     </Box>
 
 
-                    <Box mt={6}  sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', md: '0px'}}}>
+                    <Box mt={6}  sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', sm: '0px'}}}>
                         <Typography fontWeight="bold" variant="h5" mb={1}>Courses for Cloud Engineering and Devops</Typography>
 
                         <Grid container spacing={{xs: 5, md: 8}} >

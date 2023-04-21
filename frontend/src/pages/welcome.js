@@ -1,13 +1,19 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import ScrollToTopOnMount from "../components/scrolltoview";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import frame1 from '../assets/frame1.png';
 import frame2 from '../assets/frame2.png';
 
 
 export default function Welcome() {
+    const fullName = sessionStorage.getItem('fullName')
+
+    // if (!sessionStorage.getItem('token')) {
+    //     return <Navigate to="/auth" state={{page: 'login'}} />
+    // }
+
     return (
         <React.Fragment>
             <Box color="black" 
@@ -30,7 +36,7 @@ export default function Welcome() {
                 justifyContent="center"
                 alignItems='center'>
                     <Typography sx={{width: {xs: '90%', md: '80%'}, fontSize: {md: '4rem'}}} variant="h4">
-                        Hi Tomori, Welcome to CYBERHIVE
+                        Hi {fullName}, Welcome to CYBERHIVE
                     </Typography>
                     <Typography mt={2} mb={2}  sx={{width: {xs: '90%', md: '80%'}}}>
                         With our intuitive platform, you'll have access to a wealth of resources, including interactive course and engaging videos. Our team of experienced educators and developers has worked to create an immersive learning experience that's both effective and efficient.

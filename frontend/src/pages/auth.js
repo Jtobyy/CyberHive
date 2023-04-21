@@ -21,8 +21,7 @@ export default function Auth() {
     const props = location.state;
 
     return(
-        <Box 
-         disableGutters sx={{ backgroundImage: `url(${background})`, pb: 8, minHeight: '100vh'}}>
+        <Box id="auth" disableGutters sx={{ backgroundImage: `url(${background})`, pb: 8, minHeight: '100vh'}}>
             <ScrollToTopOnMount />        
             <Box display='flex' flexDirection="column" 
             alignItems='center' bgcolor="#1B065E" py={2}>

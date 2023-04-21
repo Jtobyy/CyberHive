@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Box, Typography, ListItemText, Stack, List, ListItemButton, ListItemIcon } from "@mui/material";
 import ScrollToTopOnMount from "../components/scrolltoview";
 import logo from "../assets/logo.svg";
@@ -41,6 +41,10 @@ const navItems = [
 
 export default function Dashboard() {
         const [active, setActive] = useState("dashboard")
+        
+        // if (!sessionStorage.getItem('token')) {
+        //     return <Navigate to="/auth" state={{page: 'login'}} />
+        // }
         
         return (
             <React.Fragment>

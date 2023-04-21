@@ -42,23 +42,23 @@ export default function Header() {
                 <div class="collapse navbar-collapse " id="headerNavbar">
                   <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li className="nav-item me-3 active " id="nav-item1" >
-                            <a href="https://tech4mationltd-0.odoo.com/cyberbuy"
+                            <Link to="/dashboard"
                                 className="nav-link" onClick={(e) => {
                                 $('.nav-item').removeClass('active')
                                 e.target.parentElement.classList.add('active')
-                        }}>Courses</a>
+                        }}>Courses</Link>
                     </li>
                     <li className="nav-item me-3" id="nav-item2">
-                            <HashLink className="nav-link" to="/#about-us" onClick={(e) => {
+                            <HashLink className="nav-link" to="/#blog" onClick={(e) => {
                                 $('.nav-item').removeClass('active')
                                 e.target.parentElement.classList.add('active')
                         }}>Blogs</HashLink>
                         </li>
                         <li className="nav-item me-3 " id="nav-item3">
-                            <a  href="https://tech4mationltd-0.odoo.com/shop" className="nav-link" to="/#what-we-do" onClick={(e) => {
+                            <Link  to="/dashboard" className="nav-link" onClick={(e) => {
                                 $('.nav-item').removeClass('active')
                                 e.target.parentElement.classList.add('active')
-                        }}>Resources</a>
+                        }}>Resources</Link>
                         </li>
                         
                         <li className="nav-item me-3 " id="nav-item4">

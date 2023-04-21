@@ -42,7 +42,7 @@ const plans = [
     },
     {
         id: 3,    
-        title: 'Cyberhive Free',
+        title: 'Cyberhive Teams',
         price: '$40/',
         benefits: [
             'Up to 30 employees',

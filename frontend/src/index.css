@@ -13,6 +13,10 @@ button {
 button:hover {
   color: black !important;
 }
+#auth button:hover {
+  color: #FF499E !important;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -37,6 +41,18 @@ code {
 .t3 {
   width: 13px;
 }
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 @media screen and (max-width: 700px) {
   .footer-icons img {
     width: 20px;

@@ -72,18 +72,25 @@ const courses = {
 
 
 export default class Home extends React.Component {
+    constructor()  {
+        super()    
+        this.state = {
+            fullName: sessionStorage.getItem('fullName')
+        }
+    }
+
     render() {
         return (
             <>
                 <Box color="black" p={3}>
-                    <Typography fontWeight="bold" >Welcome to your dashboard, Tomori</Typography>
+                    <Typography fontWeight="bold" >Welcome to your dashboard, {this.state.fullName}</Typography>
                     <Typography variant="body2">We're delighted to have you onboard! You took the right first step to cybersecurity education. Start learning right away.</Typography>   
 
                     <Box mt={4}>
                         <Typography fontWeight="bold" variant="h5">Recommended  courses</Typography>
                         <Typography variant="body2" mb={4}>Smart, simple and courses to get your cyber journey underway</Typography>
 
-                        <Grid container spacing={{xs: 5, md: 8}} sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', md: '-60px'}}}>
+                        <Grid container spacing={{xs: 5, md: 8}} sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', sm: '-60px'}}}>
                             {courses.recommended.map((course) => {
                                 return (
                                     <Grid item xs={12} md={4} >
@@ -121,7 +128,7 @@ export default class Home extends React.Component {
                         </Grid>                        
                     </Box>
 
-                    <Box mt={6}  sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', md: '-60px'}}}>
+                    <Box mt={6}  sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', sm: '-60px'}}}>
                         <Typography fontWeight="bold" variant="h5">Structural courses</Typography>
                         <Typography variant="body2" mb={4}>Smart, simple and courses to get your cyber journey underway</Typography>
 
@@ -158,7 +165,7 @@ export default class Home extends React.Component {
                     </Box>                    
 
 
-                    <Box mt={6}  sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', md: '-60px'}}}>
+                    <Box mt={6}  sx={{width: {xs: '80vw', md: 'inherit'}, marginLeft: {xs: '-40vw', sm: '-60px'}}}>
                         <Typography fontWeight="bold" variant="h5">Free courses</Typography>
                         <Typography variant="body2" mb={4}>Learn a thing or two without suscribing to the platform</Typography>
 
